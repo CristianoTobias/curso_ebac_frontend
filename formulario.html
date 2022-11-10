@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <form>
+      <fieldset id="user">
+        <legend>Identificação do Usuário</legend>
+        <p>
+          <label for="cnome">Nome:</label>
+          <input
+            type="text"
+            name="tnome"
+            id="cnome"
+            size="20"
+            maxlength="30"
+            placeholder="Digite o nome completo"
+            required
+          />
+        </p>
+        <p>
+          <label for="cemail">Email:</label>
+          <input
+            type="email"
+            name="temail"
+            id="cemail"
+            size="20"
+            maxlength="40"
+            placeholder="Digite seu email"
+            required
+          />
+        </p>
+        <p>
+          <label for="csenha">Senha:</label>
+          <input
+            type="password"
+            name="tsenha"
+            id="csenha"
+            size="8"
+            maxlength="8"
+            placeholder="8 digitos"
+            required
+          />
+        </p>
+        <p><input type="submit" value="Enviar" /></p>
+      </fieldset>
+    </form>
+  </body>
+</html>
