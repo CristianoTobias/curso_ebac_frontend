@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML com JS</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>EBAC Formulário</h1>
+      <h2>Validação</h2>
+      <form id="form-validacao">
+        <label for="campo-A">Campo A</label>
+        <input
+          type="numero"
+          id="campo-A"
+          required
+          placeholder="Digite um número..."
+          
+        />
+        
+        <label for="campo-B">Campo B</label>
+        <input
+          type="number"
+          id="campo-B"
+          required
+          placeholder="Digite um número..."
+          
+        />
+
+        <button id="btn-validar" type="submit">Validar</button>
+      </form>
+      <p class="success-message"></p>
+      <p class="error-message">O valor do campo B tem que ser maior que o valor do campo A</p>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
