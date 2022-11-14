@@ -46,6 +46,7 @@ button:hover {
   background-color: #08371c;
   padding: 16px;
   color: #fff;
+  text-align: center;
   display: none;
 }
 

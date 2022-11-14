@@ -6,9 +6,7 @@ let formValido = false;
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  let mensagemSucesso = `Validação completada com sucesso!`;
   if (formValido) {
-    containerMessageSuccess.innerHTML = mensagemSucesso;
     containerMessageSuccess.style.display = "block";
     campoA.value = ""
     campoB.value = ""
