@@ -1,45 +1,27 @@
-let form = document.getElementById("form-validacao");
-let campoA = document.getElementById("campo-A");
-let campoB = document.getElementById("campo-B");
-let containerMessageSuccess =  document.querySelector('.success-message');
-let formValido = false;
+$(document).ready(function () {
+  let arrTarefas = [];
+  $("header button").click(function () {
+    $("form").slideDown();
+  });
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  if (formValido) {
-    containerMessageSuccess.style.display = "block";
-    campoA.value = ""
-    campoB.value = ""
+  $("#btn-cancelar").click(function () {
+    $("form").slideUp();
+  });
+
+  $("form").on("submit", function (e) {
+    e.preventDefault();
+    const enderecoNovaTarefa = $("#endereco-tarefa-nova").val();
+    if(!arrTarefas.includes(enderecoNovaTarefa.toUpperCase())){
+      arrTarefas.push(enderecoNovaTarefa.toUpperCase())
+      $("#lista-tarefas").append(`<li>${enderecoNovaTarefa}</li>`);
+    $("#endereco-tarefa-nova").val("");
+    }else{
+      alert("Tarefa já adicionada!!!")
+      $("#endereco-tarefa-nova").val("");
+    }
     
-  } 
+  });
+  $(document).on("click", "li", function () {
+    $(this).toggleClass("riscado");
+  });
 });
-
-campoA.addEventListener("keyup", function(e){
-   formValido = parseFloat(e.target.value) < parseFloat(campoB.value);
-   console.log(campoB.value)
-   console.log(campoA.value)
-   if (!formValido) {
-    campoA.classList.add('error');
-    document.querySelector('.error-message').style.display = "block";
-    containerMessageSuccess.style.display = "none";
-  }else {
-    campoA.classList.remove('error');
-    campoB.classList.remove('error');
-    document.querySelector('.error-message').style.display = "none";
-  }
-})
-
-campoB.addEventListener("keyup", function(e){
-  formValido = parseFloat(e.target.value) > parseFloat(campoA.value);
-  console.log(campoB.value)
-  console.log(campoA.value)
-  if (!formValido) {
-   campoB.classList.add('error');
-   document.querySelector('.error-message').style.display = "block";
-   containerMessageSuccess.style.display = "none";
- }else {
-   campoB.classList.remove('error');
-   campoA.classList.remove('error')
-   document.querySelector('.error-message').style.display = "none";
- }
-})

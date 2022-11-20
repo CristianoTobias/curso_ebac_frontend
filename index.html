@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML com JS</title>
-    <link rel="stylesheet" href="./main.css" />
+    <title>To do - JQuery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>EBAC Formulário</h1>
-      <h2>Validação</h2>
-      <form id="form-validacao">
-        <label for="campo-A">Campo A</label>
-        <input
-          type="numero"
-          id="campo-A"
-          required
-          placeholder="Digite um número..."
-        />
+    <header>
+      <h1>To do</h1>
+      <button type="button">Nova Tarefa</button>
+    </header>
+    <form action="#">
+      <h2>Inserir nova Tarefa</h2>
+      <input
+        type="text"
+        id="endereco-tarefa-nova"
+        placeholder="Digite a nova tarefa"
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Adicionar</button>
+      <button type="reset" id="btn-cancelar">Cancelar</button>
+    </form>
+    <ul id="lista-tarefas">
+     
+    </ul>
 
-        <label for="campo-B">Campo B</label>
-        <input
-          type="number"
-          id="campo-B"
-          required
-          placeholder="Digite um número..."
-        />
-
-        <button id="btn-validar" type="submit">Validar</button>
-      </form>
-      <p class="success-message">Validação completada com sucesso!</p>
-      <p class="error-message">
-        O valor do campo B tem que ser maior que o valor do campo A
-      </p>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
