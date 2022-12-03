@@ -1,6 +1,6 @@
 $(document).ready(function () {
-   let valida = false
-   $.validator.addMethod(
+  let valida = false;
+  $.validator.addMethod(
     "wordCount",
     function (value, element, wordCount) {
       let temp = [...value.split(" ")];
@@ -64,15 +64,10 @@ $(document).ready(function () {
     "CPF inválido"
   );
 
-  $.validator.addMethod("cep",function(value){
-    
-   
-    return valida
-    
-      
-  })
-  
-  
+  $.validator.addMethod("cep", function (value) {
+    return valida;
+  });
+
   $("#nome").keyup(function () {
     let $this = $(this);
     let valor = $this.val();
@@ -100,12 +95,12 @@ $(document).ready(function () {
   });
   $("#cep").keyup(function () {
     let cep = $(this).val().replace(/\D/g, "");
-
+    //https://viacep.com.br/exemplo/jquery/
     //Verifica se campo cep possui valor informado.
     if (cep != "") {
       //Expressão regular para validar o CEP.
       let validacep = /^[0-9]{8}$/;
-     
+
       //Valida o formato do CEP.
       if (validacep.test(cep)) {
         //Preenche os campos com "..." enquanto consulta webservice.
@@ -115,37 +110,27 @@ $(document).ready(function () {
         $("#uf").addClass("my-valid-class");
 
         //Consulta o webservice viacep.com.br/
-       $.getJSON(
+        $.getJSON(
           "https://viacep.com.br/ws/" + cep + "/json/?callback=?",
-           function (dados) {
+          function (dados) {
             if (!("erro" in dados)) {
               //Atualiza os campos comcep os valores da consulta.
               $("#rua").val(dados.logradouro);
               $("#bairro").val(dados.bairro);
               $("#cidade").val(dados.localidade);
               $("#uf").val(dados.uf);
-              valida = true
-              $('#numero').focus();
-              
+              valida = true;
+              $("#numero").focus();
             } else {
               limpa_formulario_cep();
-              valida = false
-              
+              valida = false;
             }
-            
           }
-          
         );
-       
-        
       } else {
-        
         limpa_formulario_cep();
       }
-      
-      
     }
-    
   });
   $("form").validate({
     //https://pt.stackoverflow.com/questions/162002/como-mudar-a-cor-do-input-usando-o-jquery-validate
@@ -170,12 +155,12 @@ $(document).ready(function () {
       cpf: {
         required: true,
         minlength: 14,
-        cpf: true
+        cpf: true,
       },
       cep: {
         required: true,
         minlength: 9,
-        cep: true
+        cep: true,
       },
 
       numero: {
@@ -203,9 +188,9 @@ $(document).ready(function () {
       cep: {
         required: "CEP inválido!",
         minlength: "CEP inválido!",
-        cep: "CEP inválido"
+        cep: "CEP inválido",
       },
-      
+
       numero: "Numero inválido!",
     },
     submitHandler: function (form) {
@@ -230,6 +215,4 @@ $(document).ready(function () {
     $("#cidade").val("");
     $("#uf").val("");
   }
-  
-  
 });
