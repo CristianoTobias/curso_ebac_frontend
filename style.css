@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+}
+
+form {
+  position: relative;
+  max-width: 751px;
+  min-width: 200px;
+  height: 800px;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: rgba(3, 3, 18, 0.2);
+}
+
+form .title-formulario {
+  height: 70px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(19, 11, 11, 0.3);
+  width: 100%;
+  border-radius: 10px;
+  z-index: -1;
+  margin-bottom: 30px;
+}
+
+form input {
+  width: 60%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  padding-left: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+form button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  font-size: 24px;
+  background-color: rgb(23, 182, 68);
+  border-radius: 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+video {
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  position: absolute;
+  z-index: -1;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.my-error-class {
+  color: #ff0000; /* red */
+}
+.my-valid-class {
+  color: #00cc00; /* green */
+}
