@@ -1,0 +1,22 @@
+.container {
+    max-width: 580px;
+    padding-top: 50px; 
+}
+
+.botao {
+    margin-top: 30px;
+}
+
+.my-error-class {
+    color: #ff0000; /* red */
+  }
+  .my-valid-class {
+    color: #00cc00; /* green */
+  }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
