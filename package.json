@@ -1,0 +1,24 @@
+{
+  "name": "curso_ebac_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "less": "less-watch-compiler ./src/styles ./build/styles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianoTobias/curso_ebac_frontend.git"
+  },
+  "author": "Cristiano Tobias - Ebac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristianoTobias/curso_ebac_frontend/issues"
+  },
+  "homepage": "https://github.com/CristianoTobias/curso_ebac_frontend#readme",
+  "devDependencies": {
+    "less": "^4.1.3",
+    "less-watch-compiler": "^1.16.3"
+  }
+}
