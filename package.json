@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "grunt": "grunt",
-    "build": "grunt build",
+    "sass" : "sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CristianoTobias/curso_ebac_frontend.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,13 +19,6 @@
   },
   "homepage": "https://github.com/CristianoTobias/curso_ebac_frontend#readme",
   "devDependencies": {
-    "grunt": "^1.5.3",
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-htmlmin": "^3.1.0",
-    "grunt-contrib-imagemin": "^4.0.0",
-    "grunt-contrib-less": "^3.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-replace": "^2.0.2"
+    "sass": "^1.57.1"
   }
 }
